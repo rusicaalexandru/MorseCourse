@@ -26,27 +26,27 @@ namespace MorseCourse
 
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void Form1_Load(object sender, EventArgs e) // on load
         {
 
         }
 
-        private void buttonTranslateToMorse_Click(object sender, EventArgs e)
+        private void buttonTranslateToMorse_Click(object sender, EventArgs e) //translate to morse
         {
             textBoxOutputMorse.Text = Translate.translateToMorse(textBoxInputText.Text.ToLower());
         }
 
-        private void buttonTranslateToText_Click(object sender, EventArgs e)
+        private void buttonTranslateToText_Click(object sender, EventArgs e) //translate to text
         {
-            textBoxOutputText.Text = Translate.translateToText(textBoxInputMorse.Text.ToLower());
+            textBoxOutputText.Text = Translate.translateToText(textBoxInputMorse.Text + " ".ToLower()); // + " " - removes necesety to add blank space at the end of morce code to translate
         }
 
-        private void buttonClearTextTr_Click(object sender, EventArgs e)
+        private void buttonClearTextTr_Click(object sender, EventArgs e) //clear output (morse)
         {
             textBoxOutputMorse.Text = string.Empty;
         }
 
-        private void buttonClearMorseTr_Click(object sender, EventArgs e)
+        private void buttonClearMorseTr_Click(object sender, EventArgs e) //clear output (text)
         {
             textBoxOutputText.Text = string.Empty;
         }
