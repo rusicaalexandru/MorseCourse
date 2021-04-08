@@ -21,12 +21,7 @@ namespace MorseCourse
         }
 
 
-        private void buttonTest_Click(object sender, EventArgs e)
-        {
-            TEST();
-        }
-
-        public void TEST()
+        private void buttonTest_Click(object sender, EventArgs e) //button for tests
         {
 
         }
@@ -43,7 +38,7 @@ namespace MorseCourse
 
         private void buttonTranslateToText_Click(object sender, EventArgs e)
         {
-            textBoxOutputText.Text = Translate.translateToMorse(textBoxInputMorse.Text.ToLower());
+            textBoxOutputText.Text = Translate.translateToText(textBoxInputMorse.Text.ToLower());
         }
 
         private void buttonClearTextTr_Click(object sender, EventArgs e)
