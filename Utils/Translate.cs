@@ -26,9 +26,19 @@ namespace MorseCourse.Utils
         public static string translateToText(string morse)
         {
             string output = string.Empty;
+            string morseWord = string.Empty;
+
             for (int i = 0; i < morse.Length; i++)
             {
-
+                if (morse[i] != ' ')
+                {
+                    morseWord += morse[i];
+                }
+                else
+                {
+                    output += translateMorse(morseWord);
+                    morseWord = string.Empty;
+                }
 
             }
             return output;
@@ -41,79 +51,79 @@ namespace MorseCourse.Utils
             switch (letter)
             {
                 case 'a':
-                    return ".-";
+                    return ".- ";
                 case 'b':
-                    return "-...";
+                    return "-... ";
                 case 'c':
-                    return "-.-.";
+                    return "-.-. ";
                 case 'd':
-                    return "-..";
+                    return "-.. ";
                 case 'e':
-                    return ".";
+                    return ". ";
                 case 'f':
-                    return "..-.";
+                    return "..-. ";
                 case 'g':
-                    return "--.";
+                    return "--. ";
                 case 'h':
-                    return "....";
+                    return ".... ";
                 case 'i':
-                    return "..";
+                    return ".. ";
                 case 'j':
-                    return ".---";
+                    return ".--- ";
                 case 'k':
-                    return "-.-";
+                    return "-.- ";
                 case 'l':
-                    return ".-..";
+                    return ".-.. ";
                 case 'm':
-                    return "--";
+                    return "-- ";
                 case 'n':
-                    return "-.";
+                    return "-. ";
                 case 'o':
-                    return "---";
+                    return "--- ";
                 case 'p':
-                    return ".--.";
+                    return ".--. ";
                 case 'q':
-                    return "--.-";
+                    return "--.- ";
                 case 'r':
-                    return ".-.";
+                    return ".-. ";
                 case 's':
-                    return "...";
+                    return "... ";
                 case 't':
-                    return "-";
+                    return "- ";
                 case 'u':
-                    return "..-";
+                    return "..- ";
                 case 'v':
-                    return "...-";
+                    return "...- ";
                 case 'w':
-                    return ".--";
+                    return ".-- ";
                 case 'x':
-                    return "-..-";
+                    return "-..- ";
                 case 'y':
-                    return "-.--";
+                    return "-.-- ";
                 case 'z':
-                    return "--..";
+                    return "--.. ";
                 case '1':
-                    return ".----";
+                    return ".---- ";
                 case '2':
-                    return "..---";
+                    return "..--- ";
                 case '3':
-                    return "...--";
+                    return "...-- ";
                 case '4':
-                    return "....-";
+                    return "....- ";
                 case '5':
-                    return ".....";
+                    return "..... ";
                 case '6':
-                    return "-....";
+                    return "-.... ";
                 case '7':
-                    return "--...";
+                    return "--... ";
                 case '8':
-                    return "---..";
+                    return "---.. ";
                 case '9':
-                    return "----.";
+                    return "----. ";
                 case '0':
-                    return "-----";
+                    return "----- ";
                 case ' ':
-                    return "/";
+                    return " / ";
                 default:
                     return "unknown";
             }
@@ -197,6 +207,8 @@ namespace MorseCourse.Utils
                     return "0";
                 case "/":
                     return " ";
+                case "":
+                    return "";
                 default:
                     return "unknown";
             }
