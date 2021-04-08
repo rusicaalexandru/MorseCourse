@@ -32,6 +32,13 @@ namespace MorseCourse
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.buttonClearMorseTr = new System.Windows.Forms.Button();
+            this.buttonClearTextTr = new System.Windows.Forms.Button();
+            this.buttonTranslateToText = new System.Windows.Forms.Button();
+            this.textBoxOutputText = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.textBoxInputMorse = new System.Windows.Forms.TextBox();
             this.buttonTranslateToMorse = new System.Windows.Forms.Button();
             this.textBoxOutputMorse = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -45,13 +52,10 @@ namespace MorseCourse
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.tabPage5 = new System.Windows.Forms.TabPage();
-            this.buttonTranslateToText = new System.Windows.Forms.Button();
-            this.textBoxOutputText = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textBoxInputMorse = new System.Windows.Forms.TextBox();
-            this.buttonClearTextTr = new System.Windows.Forms.Button();
-            this.buttonClearMorseTr = new System.Windows.Forms.Button();
+            this.buttonPlayMorseSound1 = new System.Windows.Forms.Button();
+            this.buttonPlayMorseSound2 = new System.Windows.Forms.Button();
+            this.buttonStopSound2 = new System.Windows.Forms.Button();
+            this.buttonStopSound1 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -76,6 +80,10 @@ namespace MorseCourse
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.buttonStopSound1);
+            this.tabPage1.Controls.Add(this.buttonStopSound2);
+            this.tabPage1.Controls.Add(this.buttonPlayMorseSound2);
+            this.tabPage1.Controls.Add(this.buttonPlayMorseSound1);
             this.tabPage1.Controls.Add(this.buttonClearMorseTr);
             this.tabPage1.Controls.Add(this.buttonClearTextTr);
             this.tabPage1.Controls.Add(this.buttonTranslateToText);
@@ -99,11 +107,75 @@ namespace MorseCourse
             this.tabPage1.Text = "Translate";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // buttonClearMorseTr
+            // 
+            this.buttonClearMorseTr.Location = new System.Drawing.Point(675, 187);
+            this.buttonClearMorseTr.Name = "buttonClearMorseTr";
+            this.buttonClearMorseTr.Size = new System.Drawing.Size(87, 23);
+            this.buttonClearMorseTr.TabIndex = 14;
+            this.buttonClearMorseTr.Text = "Clear";
+            this.buttonClearMorseTr.UseVisualStyleBackColor = true;
+            this.buttonClearMorseTr.Click += new System.EventHandler(this.buttonClearMorseTr_Click);
+            // 
+            // buttonClearTextTr
+            // 
+            this.buttonClearTextTr.Location = new System.Drawing.Point(675, 68);
+            this.buttonClearTextTr.Name = "buttonClearTextTr";
+            this.buttonClearTextTr.Size = new System.Drawing.Size(87, 23);
+            this.buttonClearTextTr.TabIndex = 13;
+            this.buttonClearTextTr.Text = "Clear";
+            this.buttonClearTextTr.UseVisualStyleBackColor = true;
+            this.buttonClearTextTr.Click += new System.EventHandler(this.buttonClearTextTr_Click);
+            // 
+            // buttonTranslateToText
+            // 
+            this.buttonTranslateToText.Location = new System.Drawing.Point(675, 128);
+            this.buttonTranslateToText.Name = "buttonTranslateToText";
+            this.buttonTranslateToText.Size = new System.Drawing.Size(87, 23);
+            this.buttonTranslateToText.TabIndex = 12;
+            this.buttonTranslateToText.Text = "Translate";
+            this.buttonTranslateToText.UseVisualStyleBackColor = true;
+            this.buttonTranslateToText.Click += new System.EventHandler(this.buttonTranslateToText_Click);
+            // 
+            // textBoxOutputText
+            // 
+            this.textBoxOutputText.Location = new System.Drawing.Point(56, 187);
+            this.textBoxOutputText.Name = "textBoxOutputText";
+            this.textBoxOutputText.ReadOnly = true;
+            this.textBoxOutputText.Size = new System.Drawing.Size(613, 20);
+            this.textBoxOutputText.TabIndex = 11;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(6, 190);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(28, 13);
+            this.label3.TabIndex = 10;
+            this.label3.Text = "Text";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(6, 133);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(36, 13);
+            this.label4.TabIndex = 9;
+            this.label4.Text = "Morse";
+            // 
+            // textBoxInputMorse
+            // 
+            this.textBoxInputMorse.Font = new System.Drawing.Font("Sitka Small", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxInputMorse.Location = new System.Drawing.Point(56, 130);
+            this.textBoxInputMorse.Name = "textBoxInputMorse";
+            this.textBoxInputMorse.Size = new System.Drawing.Size(613, 51);
+            this.textBoxInputMorse.TabIndex = 8;
+            // 
             // buttonTranslateToMorse
             // 
-            this.buttonTranslateToMorse.Location = new System.Drawing.Point(687, 7);
+            this.buttonTranslateToMorse.Location = new System.Drawing.Point(675, 7);
             this.buttonTranslateToMorse.Name = "buttonTranslateToMorse";
-            this.buttonTranslateToMorse.Size = new System.Drawing.Size(75, 23);
+            this.buttonTranslateToMorse.Size = new System.Drawing.Size(87, 23);
             this.buttonTranslateToMorse.TabIndex = 7;
             this.buttonTranslateToMorse.Text = "Translate";
             this.buttonTranslateToMorse.UseVisualStyleBackColor = true;
@@ -111,10 +183,11 @@ namespace MorseCourse
             // 
             // textBoxOutputMorse
             // 
+            this.textBoxOutputMorse.Font = new System.Drawing.Font("Sitka Small", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxOutputMorse.Location = new System.Drawing.Point(56, 40);
             this.textBoxOutputMorse.Name = "textBoxOutputMorse";
             this.textBoxOutputMorse.ReadOnly = true;
-            this.textBoxOutputMorse.Size = new System.Drawing.Size(625, 20);
+            this.textBoxOutputMorse.Size = new System.Drawing.Size(613, 51);
             this.textBoxOutputMorse.TabIndex = 6;
             // 
             // label2
@@ -139,7 +212,7 @@ namespace MorseCourse
             // 
             this.textBoxInputText.Location = new System.Drawing.Point(56, 9);
             this.textBoxInputText.Name = "textBoxInputText";
-            this.textBoxInputText.Size = new System.Drawing.Size(625, 20);
+            this.textBoxInputText.Size = new System.Drawing.Size(613, 20);
             this.textBoxInputText.TabIndex = 3;
             this.textBoxInputText.Text = "Hello";
             // 
@@ -227,68 +300,41 @@ namespace MorseCourse
             this.tabPage5.Text = "Tutorial";
             this.tabPage5.UseVisualStyleBackColor = true;
             // 
-            // buttonTranslateToText
+            // buttonPlayMorseSound1
             // 
-            this.buttonTranslateToText.Location = new System.Drawing.Point(687, 73);
-            this.buttonTranslateToText.Name = "buttonTranslateToText";
-            this.buttonTranslateToText.Size = new System.Drawing.Size(75, 23);
-            this.buttonTranslateToText.TabIndex = 12;
-            this.buttonTranslateToText.Text = "Translate";
-            this.buttonTranslateToText.UseVisualStyleBackColor = true;
-            this.buttonTranslateToText.Click += new System.EventHandler(this.buttonTranslateToText_Click);
+            this.buttonPlayMorseSound1.Location = new System.Drawing.Point(675, 39);
+            this.buttonPlayMorseSound1.Name = "buttonPlayMorseSound1";
+            this.buttonPlayMorseSound1.Size = new System.Drawing.Size(35, 23);
+            this.buttonPlayMorseSound1.TabIndex = 15;
+            this.buttonPlayMorseSound1.Text = "Play";
+            this.buttonPlayMorseSound1.UseVisualStyleBackColor = true;
             // 
-            // textBoxOutputText
+            // buttonPlayMorseSound2
             // 
-            this.textBoxOutputText.Location = new System.Drawing.Point(56, 106);
-            this.textBoxOutputText.Name = "textBoxOutputText";
-            this.textBoxOutputText.ReadOnly = true;
-            this.textBoxOutputText.Size = new System.Drawing.Size(625, 20);
-            this.textBoxOutputText.TabIndex = 11;
+            this.buttonPlayMorseSound2.Location = new System.Drawing.Point(675, 158);
+            this.buttonPlayMorseSound2.Name = "buttonPlayMorseSound2";
+            this.buttonPlayMorseSound2.Size = new System.Drawing.Size(35, 23);
+            this.buttonPlayMorseSound2.TabIndex = 16;
+            this.buttonPlayMorseSound2.Text = "Play";
+            this.buttonPlayMorseSound2.UseVisualStyleBackColor = true;
             // 
-            // label3
+            // buttonStopSound2
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(6, 109);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(28, 13);
-            this.label3.TabIndex = 10;
-            this.label3.Text = "Text";
+            this.buttonStopSound2.Location = new System.Drawing.Point(716, 158);
+            this.buttonStopSound2.Name = "buttonStopSound2";
+            this.buttonStopSound2.Size = new System.Drawing.Size(46, 23);
+            this.buttonStopSound2.TabIndex = 17;
+            this.buttonStopSound2.Text = "Stop";
+            this.buttonStopSound2.UseVisualStyleBackColor = true;
             // 
-            // label4
+            // buttonStopSound1
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(6, 78);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(36, 13);
-            this.label4.TabIndex = 9;
-            this.label4.Text = "Morse";
-            // 
-            // textBoxInputMorse
-            // 
-            this.textBoxInputMorse.Location = new System.Drawing.Point(56, 75);
-            this.textBoxInputMorse.Name = "textBoxInputMorse";
-            this.textBoxInputMorse.Size = new System.Drawing.Size(625, 20);
-            this.textBoxInputMorse.TabIndex = 8;
-            // 
-            // buttonClearTextTr
-            // 
-            this.buttonClearTextTr.Location = new System.Drawing.Point(687, 38);
-            this.buttonClearTextTr.Name = "buttonClearTextTr";
-            this.buttonClearTextTr.Size = new System.Drawing.Size(75, 23);
-            this.buttonClearTextTr.TabIndex = 13;
-            this.buttonClearTextTr.Text = "Clear";
-            this.buttonClearTextTr.UseVisualStyleBackColor = true;
-            this.buttonClearTextTr.Click += new System.EventHandler(this.buttonClearTextTr_Click);
-            // 
-            // buttonClearMorseTr
-            // 
-            this.buttonClearMorseTr.Location = new System.Drawing.Point(687, 104);
-            this.buttonClearMorseTr.Name = "buttonClearMorseTr";
-            this.buttonClearMorseTr.Size = new System.Drawing.Size(75, 23);
-            this.buttonClearMorseTr.TabIndex = 14;
-            this.buttonClearMorseTr.Text = "Clear";
-            this.buttonClearMorseTr.UseVisualStyleBackColor = true;
-            this.buttonClearMorseTr.Click += new System.EventHandler(this.buttonClearMorseTr_Click);
+            this.buttonStopSound1.Location = new System.Drawing.Point(716, 39);
+            this.buttonStopSound1.Name = "buttonStopSound1";
+            this.buttonStopSound1.Size = new System.Drawing.Size(46, 23);
+            this.buttonStopSound1.TabIndex = 18;
+            this.buttonStopSound1.Text = "Stop";
+            this.buttonStopSound1.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -332,6 +378,10 @@ namespace MorseCourse
         private System.Windows.Forms.TextBox textBoxInputMorse;
         private System.Windows.Forms.Button buttonClearMorseTr;
         private System.Windows.Forms.Button buttonClearTextTr;
+        private System.Windows.Forms.Button buttonPlayMorseSound2;
+        private System.Windows.Forms.Button buttonPlayMorseSound1;
+        private System.Windows.Forms.Button buttonStopSound1;
+        private System.Windows.Forms.Button buttonStopSound2;
     }
 }
 

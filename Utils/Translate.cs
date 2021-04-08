@@ -22,7 +22,7 @@ namespace MorseCourse.Utils
                 }
             }
             return output;
-        } // done
+        }
         public static string translateToText(string morse)
         {
             string output = string.Empty;
@@ -43,8 +43,6 @@ namespace MorseCourse.Utils
             }
             return output;
         }
-
-
 
         private static string translateLetters(char letter)
         {
@@ -123,11 +121,11 @@ namespace MorseCourse.Utils
                 case '0':
                     return "----- ";
                 case ' ':
-                    return " / ";
+                    return "/ ";
                 default:
                     return "unknown";
             }
-        } // done
+        }
         private static string translateMorse(string morseLetter)
         {
 
