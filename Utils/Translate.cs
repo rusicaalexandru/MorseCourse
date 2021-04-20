@@ -27,7 +27,7 @@ namespace MorseCourse.Utils
         {
             string output = string.Empty;
             string morseWord = string.Empty;
-
+            morse += " "; // to translate last letter
             for (int i = 0; i < morse.Length; i++)
             {
                 if (morse[i] != ' ')

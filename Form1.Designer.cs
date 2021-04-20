@@ -32,6 +32,10 @@ namespace MorseCourse
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.buttonStopSound1 = new System.Windows.Forms.Button();
+            this.buttonStopSound2 = new System.Windows.Forms.Button();
+            this.buttonPlayMorseSound2 = new System.Windows.Forms.Button();
+            this.buttonPlayMorseSound1 = new System.Windows.Forms.Button();
             this.buttonClearMorseTr = new System.Windows.Forms.Button();
             this.buttonClearTextTr = new System.Windows.Forms.Button();
             this.buttonTranslateToText = new System.Windows.Forms.Button();
@@ -46,24 +50,28 @@ namespace MorseCourse
             this.textBoxInputText = new System.Windows.Forms.TextBox();
             this.buttonTest = new System.Windows.Forms.Button();
             this.buttonClearCurent = new System.Windows.Forms.Button();
-            this.button = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.radioButtonTranslateTo = new System.Windows.Forms.RadioButton();
+            this.label8 = new System.Windows.Forms.Label();
+            this.labelTest = new System.Windows.Forms.Label();
+            this.buttonStartTest = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.numericUpDownExercises = new System.Windows.Forms.NumericUpDown();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.tabPage5 = new System.Windows.Forms.TabPage();
-            this.buttonPlayMorseSound1 = new System.Windows.Forms.Button();
-            this.buttonPlayMorseSound2 = new System.Windows.Forms.Button();
-            this.buttonStopSound2 = new System.Windows.Forms.Button();
-            this.buttonStopSound1 = new System.Windows.Forms.Button();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.tabPage3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownExercises)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -102,7 +110,6 @@ namespace MorseCourse
             this.tabPage1.Controls.Add(this.textBoxInputText);
             this.tabPage1.Controls.Add(this.buttonTest);
             this.tabPage1.Controls.Add(this.buttonClearCurent);
-            this.tabPage1.Controls.Add(this.button);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
@@ -110,6 +117,42 @@ namespace MorseCourse
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Translate";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // buttonStopSound1
+            // 
+            this.buttonStopSound1.Location = new System.Drawing.Point(716, 39);
+            this.buttonStopSound1.Name = "buttonStopSound1";
+            this.buttonStopSound1.Size = new System.Drawing.Size(46, 23);
+            this.buttonStopSound1.TabIndex = 18;
+            this.buttonStopSound1.Text = "Stop";
+            this.buttonStopSound1.UseVisualStyleBackColor = true;
+            // 
+            // buttonStopSound2
+            // 
+            this.buttonStopSound2.Location = new System.Drawing.Point(716, 158);
+            this.buttonStopSound2.Name = "buttonStopSound2";
+            this.buttonStopSound2.Size = new System.Drawing.Size(46, 23);
+            this.buttonStopSound2.TabIndex = 17;
+            this.buttonStopSound2.Text = "Stop";
+            this.buttonStopSound2.UseVisualStyleBackColor = true;
+            // 
+            // buttonPlayMorseSound2
+            // 
+            this.buttonPlayMorseSound2.Location = new System.Drawing.Point(675, 158);
+            this.buttonPlayMorseSound2.Name = "buttonPlayMorseSound2";
+            this.buttonPlayMorseSound2.Size = new System.Drawing.Size(35, 23);
+            this.buttonPlayMorseSound2.TabIndex = 16;
+            this.buttonPlayMorseSound2.Text = "Play";
+            this.buttonPlayMorseSound2.UseVisualStyleBackColor = true;
+            // 
+            // buttonPlayMorseSound1
+            // 
+            this.buttonPlayMorseSound1.Location = new System.Drawing.Point(675, 39);
+            this.buttonPlayMorseSound1.Name = "buttonPlayMorseSound1";
+            this.buttonPlayMorseSound1.Size = new System.Drawing.Size(35, 23);
+            this.buttonPlayMorseSound1.TabIndex = 15;
+            this.buttonPlayMorseSound1.Text = "Play";
+            this.buttonPlayMorseSound1.UseVisualStyleBackColor = true;
             // 
             // buttonClearMorseTr
             // 
@@ -222,7 +265,7 @@ namespace MorseCourse
             // 
             // buttonTest
             // 
-            this.buttonTest.Location = new System.Drawing.Point(606, 319);
+            this.buttonTest.Location = new System.Drawing.Point(606, 371);
             this.buttonTest.Name = "buttonTest";
             this.buttonTest.Size = new System.Drawing.Size(75, 23);
             this.buttonTest.TabIndex = 2;
@@ -233,24 +276,12 @@ namespace MorseCourse
             // buttonClearCurent
             // 
             this.buttonClearCurent.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonClearCurent.Location = new System.Drawing.Point(687, 319);
+            this.buttonClearCurent.Location = new System.Drawing.Point(687, 371);
             this.buttonClearCurent.Name = "buttonClearCurent";
             this.buttonClearCurent.Size = new System.Drawing.Size(75, 23);
             this.buttonClearCurent.TabIndex = 1;
             this.buttonClearCurent.Text = "Clear";
             this.buttonClearCurent.UseVisualStyleBackColor = true;
-            // 
-            // button
-            // 
-            this.button.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.button.Font = new System.Drawing.Font("Mongolian Baiti", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button.Location = new System.Drawing.Point(6, 348);
-            this.button.Name = "button";
-            this.button.Size = new System.Drawing.Size(756, 46);
-            this.button.TabIndex = 0;
-            this.button.Text = "Space";
-            this.button.UseVisualStyleBackColor = true;
             // 
             // tabPage2
             // 
@@ -265,6 +296,37 @@ namespace MorseCourse
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Info";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(336, 232);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(411, 18);
+            this.label6.TabIndex = 3;
+            this.label6.Text = "This program don\'t includespecial characters beside numbers";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.Maroon;
+            this.label5.Location = new System.Drawing.Point(239, 228);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(100, 24);
+            this.label5.TabIndex = 2;
+            this.label5.Text = "Warning :";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(239, 6);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(523, 219);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 1;
+            this.pictureBox2.TabStop = false;
             // 
             // pictureBox1
             // 
@@ -281,12 +343,85 @@ namespace MorseCourse
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.radioButton1);
+            this.tabPage3.Controls.Add(this.radioButtonTranslateTo);
+            this.tabPage3.Controls.Add(this.label8);
+            this.tabPage3.Controls.Add(this.labelTest);
+            this.tabPage3.Controls.Add(this.buttonStartTest);
+            this.tabPage3.Controls.Add(this.label7);
+            this.tabPage3.Controls.Add(this.numericUpDownExercises);
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Size = new System.Drawing.Size(768, 400);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Tests";
             this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Location = new System.Drawing.Point(129, 26);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(46, 17);
+            this.radioButton1.TabIndex = 11;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "ABC";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            // 
+            // radioButtonTranslateTo
+            // 
+            this.radioButtonTranslateTo.AutoSize = true;
+            this.radioButtonTranslateTo.Location = new System.Drawing.Point(69, 26);
+            this.radioButtonTranslateTo.Name = "radioButtonTranslateTo";
+            this.radioButtonTranslateTo.Size = new System.Drawing.Size(54, 17);
+            this.radioButtonTranslateTo.TabIndex = 10;
+            this.radioButtonTranslateTo.TabStop = true;
+            this.radioButtonTranslateTo.Text = "Morse";
+            this.radioButtonTranslateTo.UseVisualStyleBackColor = true;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(3, 26);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(69, 13);
+            this.label8.TabIndex = 9;
+            this.label8.Text = "Translate to :";
+            // 
+            // labelTest
+            // 
+            this.labelTest.AutoSize = true;
+            this.labelTest.Location = new System.Drawing.Point(284, 140);
+            this.labelTest.Name = "labelTest";
+            this.labelTest.Size = new System.Drawing.Size(156, 13);
+            this.labelTest.TabIndex = 8;
+            this.labelTest.Text = ": average lenght of sentenncies";
+            // 
+            // buttonStartTest
+            // 
+            this.buttonStartTest.Location = new System.Drawing.Point(23, 56);
+            this.buttonStartTest.Name = "buttonStartTest";
+            this.buttonStartTest.Size = new System.Drawing.Size(75, 23);
+            this.buttonStartTest.TabIndex = 7;
+            this.buttonStartTest.Text = "Start";
+            this.buttonStartTest.UseVisualStyleBackColor = true;
+            this.buttonStartTest.Click += new System.EventHandler(this.buttonStartTest_Click);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(129, 5);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(107, 13);
+            this.label7.TabIndex = 3;
+            this.label7.Text = ": number of exercises";
+            // 
+            // numericUpDownExercises
+            // 
+            this.numericUpDownExercises.Location = new System.Drawing.Point(3, 3);
+            this.numericUpDownExercises.Name = "numericUpDownExercises";
+            this.numericUpDownExercises.Size = new System.Drawing.Size(120, 20);
+            this.numericUpDownExercises.TabIndex = 2;
             // 
             // tabPage4
             // 
@@ -307,73 +442,6 @@ namespace MorseCourse
             this.tabPage5.Text = "Tutorial";
             this.tabPage5.UseVisualStyleBackColor = true;
             // 
-            // buttonPlayMorseSound1
-            // 
-            this.buttonPlayMorseSound1.Location = new System.Drawing.Point(675, 39);
-            this.buttonPlayMorseSound1.Name = "buttonPlayMorseSound1";
-            this.buttonPlayMorseSound1.Size = new System.Drawing.Size(35, 23);
-            this.buttonPlayMorseSound1.TabIndex = 15;
-            this.buttonPlayMorseSound1.Text = "Play";
-            this.buttonPlayMorseSound1.UseVisualStyleBackColor = true;
-            // 
-            // buttonPlayMorseSound2
-            // 
-            this.buttonPlayMorseSound2.Location = new System.Drawing.Point(675, 158);
-            this.buttonPlayMorseSound2.Name = "buttonPlayMorseSound2";
-            this.buttonPlayMorseSound2.Size = new System.Drawing.Size(35, 23);
-            this.buttonPlayMorseSound2.TabIndex = 16;
-            this.buttonPlayMorseSound2.Text = "Play";
-            this.buttonPlayMorseSound2.UseVisualStyleBackColor = true;
-            // 
-            // buttonStopSound2
-            // 
-            this.buttonStopSound2.Location = new System.Drawing.Point(716, 158);
-            this.buttonStopSound2.Name = "buttonStopSound2";
-            this.buttonStopSound2.Size = new System.Drawing.Size(46, 23);
-            this.buttonStopSound2.TabIndex = 17;
-            this.buttonStopSound2.Text = "Stop";
-            this.buttonStopSound2.UseVisualStyleBackColor = true;
-            // 
-            // buttonStopSound1
-            // 
-            this.buttonStopSound1.Location = new System.Drawing.Point(716, 39);
-            this.buttonStopSound1.Name = "buttonStopSound1";
-            this.buttonStopSound1.Size = new System.Drawing.Size(46, 23);
-            this.buttonStopSound1.TabIndex = 18;
-            this.buttonStopSound1.Text = "Stop";
-            this.buttonStopSound1.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(239, 6);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(523, 219);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 1;
-            this.pictureBox2.TabStop = false;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.Maroon;
-            this.label5.Location = new System.Drawing.Point(239, 228);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(100, 24);
-            this.label5.TabIndex = 2;
-            this.label5.Text = "Warning :";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(336, 232);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(411, 18);
-            this.label6.TabIndex = 3;
-            this.label6.Text = "This program don\'t includespecial characters beside numbers";
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -388,8 +456,11 @@ namespace MorseCourse
             this.tabPage1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.tabPage3.ResumeLayout(false);
+            this.tabPage3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownExercises)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -403,7 +474,6 @@ namespace MorseCourse
         private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button buttonClearCurent;
-        private System.Windows.Forms.Button button;
         private System.Windows.Forms.Button buttonTest;
         private System.Windows.Forms.Button buttonTranslateToMorse;
         private System.Windows.Forms.TextBox textBoxOutputMorse;
@@ -425,6 +495,13 @@ namespace MorseCourse
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.NumericUpDown numericUpDownExercises;
+        private System.Windows.Forms.Button buttonStartTest;
+        private System.Windows.Forms.Label labelTest;
+        private System.Windows.Forms.RadioButton radioButtonTranslateTo;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.RadioButton radioButton1;
     }
 }
 
