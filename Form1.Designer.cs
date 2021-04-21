@@ -70,6 +70,8 @@ namespace MorseCourse
             this.labelNrEx = new System.Windows.Forms.Label();
             this.labelRightAnswers = new System.Windows.Forms.Label();
             this.labelWrongAnswers = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.labelSkippedAnswers = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -348,6 +350,8 @@ namespace MorseCourse
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.labelSkippedAnswers);
+            this.tabPage3.Controls.Add(this.label11);
             this.tabPage3.Controls.Add(this.labelWrongAnswers);
             this.tabPage3.Controls.Add(this.labelRightAnswers);
             this.tabPage3.Controls.Add(this.labelNrEx);
@@ -497,6 +501,24 @@ namespace MorseCourse
             this.labelWrongAnswers.TabIndex = 16;
             this.labelWrongAnswers.Text = "0";
             // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(0, 177);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(94, 13);
+            this.label11.TabIndex = 17;
+            this.label11.Text = "Skipped answers :";
+            // 
+            // labelSkippedAnswers
+            // 
+            this.labelSkippedAnswers.AutoSize = true;
+            this.labelSkippedAnswers.Location = new System.Drawing.Point(97, 177);
+            this.labelSkippedAnswers.Name = "labelSkippedAnswers";
+            this.labelSkippedAnswers.Size = new System.Drawing.Size(13, 13);
+            this.labelSkippedAnswers.TabIndex = 18;
+            this.labelSkippedAnswers.Text = "0";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -562,6 +584,8 @@ namespace MorseCourse
         private System.Windows.Forms.Label labelNrEx;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label labelSkippedAnswers;
+        private System.Windows.Forms.Label label11;
     }
 }
 

@@ -29,20 +29,20 @@ namespace MorseCourse.Utils
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxAnswer = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.buttonAnswer = new System.Windows.Forms.Button();
             this.richTextBoxTest = new System.Windows.Forms.RichTextBox();
             this.SuspendLayout();
             // 
-            // textBox1
+            // textBoxAnswer
             // 
-            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.textBoxAnswer.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.Location = new System.Drawing.Point(12, 408);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(528, 20);
-            this.textBox1.TabIndex = 0;
+            this.textBoxAnswer.Location = new System.Drawing.Point(12, 408);
+            this.textBoxAnswer.Name = "textBoxAnswer";
+            this.textBoxAnswer.Size = new System.Drawing.Size(528, 20);
+            this.textBoxAnswer.TabIndex = 0;
             // 
             // label1
             // 
@@ -67,6 +67,7 @@ namespace MorseCourse.Utils
             // 
             this.richTextBoxTest.Location = new System.Drawing.Point(12, 12);
             this.richTextBoxTest.Name = "richTextBoxTest";
+            this.richTextBoxTest.ReadOnly = true;
             this.richTextBoxTest.Size = new System.Drawing.Size(528, 112);
             this.richTextBoxTest.TabIndex = 3;
             this.richTextBoxTest.Text = "text to be translated";
@@ -79,7 +80,7 @@ namespace MorseCourse.Utils
             this.Controls.Add(this.richTextBoxTest);
             this.Controls.Add(this.buttonAnswer);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBoxAnswer);
             this.Name = "ExerciseForm";
             this.Text = "ExerciseForm";
             this.ResumeLayout(false);
@@ -89,7 +90,7 @@ namespace MorseCourse.Utils
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxAnswer;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button buttonAnswer;
         private System.Windows.Forms.RichTextBox richTextBoxTest;

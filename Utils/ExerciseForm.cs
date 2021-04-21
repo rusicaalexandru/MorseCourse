@@ -16,17 +16,26 @@ namespace MorseCourse.Utils
         {
             InitializeComponent();
         }
-        bool answer;
+
         private void buttonAnswer_Click(object sender, EventArgs e)
         {
-            if (answer)//evaluate the answer
+            string pcTranslate = Translate.translateToMorse(richTextBoxTest.Text); //(text)
+            // fix validation, (makes unnecesarry to add ' ' at the end of the answer in order to validate corectly)
+            if (textBoxAnswer.Text[textBoxAnswer.Text.Length - 1] != ' ')
+            {
+                textBoxAnswer.Text += ' ';
+            }
+            if (pcTranslate == textBoxAnswer.Text) // verification of the answer
             {
                 Test.score++;
+                MessageBox.Show("right");
             }
             else
             {
                 Test.wrong++;
+                MessageBox.Show("wrong");
             }
+            //this.Close();
         }
     }
 }

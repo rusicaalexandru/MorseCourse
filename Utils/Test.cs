@@ -10,10 +10,11 @@ namespace MorseCourse.Utils
     {
         public static int score = 0;
         public static int wrong = 0;
+        public static int skiped = 0;
         public Test()
         {
             ExerciseForm ex = new ExerciseForm();
-            ex.Show();
+            ex.ShowDialog(); //instead of show, it waits until the form is closed
         }
     }
 }
