@@ -65,6 +65,11 @@ namespace MorseCourse
             this.numericUpDownExercises = new System.Windows.Forms.NumericUpDown();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.labelNrEx = new System.Windows.Forms.Label();
+            this.labelRightAnswers = new System.Windows.Forms.Label();
+            this.labelWrongAnswers = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -343,6 +348,11 @@ namespace MorseCourse
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.labelWrongAnswers);
+            this.tabPage3.Controls.Add(this.labelRightAnswers);
+            this.tabPage3.Controls.Add(this.labelNrEx);
+            this.tabPage3.Controls.Add(this.label10);
+            this.tabPage3.Controls.Add(this.label9);
             this.tabPage3.Controls.Add(this.radioButton1);
             this.tabPage3.Controls.Add(this.radioButtonTranslateTo);
             this.tabPage3.Controls.Add(this.label8);
@@ -391,11 +401,11 @@ namespace MorseCourse
             // labelTest
             // 
             this.labelTest.AutoSize = true;
-            this.labelTest.Location = new System.Drawing.Point(284, 140);
+            this.labelTest.Location = new System.Drawing.Point(20, 105);
             this.labelTest.Name = "labelTest";
-            this.labelTest.Size = new System.Drawing.Size(156, 13);
+            this.labelTest.Size = new System.Drawing.Size(71, 13);
             this.labelTest.TabIndex = 8;
-            this.labelTest.Text = ": average lenght of sentenncies";
+            this.labelTest.Text = "Nr exercises :";
             // 
             // buttonStartTest
             // 
@@ -441,6 +451,51 @@ namespace MorseCourse
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "Tutorial";
             this.tabPage5.UseVisualStyleBackColor = true;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(11, 127);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(80, 13);
+            this.label9.TabIndex = 12;
+            this.label9.Text = "Right answers :";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(5, 152);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(87, 13);
+            this.label10.TabIndex = 13;
+            this.label10.Text = "Wrong answers :";
+            // 
+            // labelNrEx
+            // 
+            this.labelNrEx.AutoSize = true;
+            this.labelNrEx.Location = new System.Drawing.Point(97, 105);
+            this.labelNrEx.Name = "labelNrEx";
+            this.labelNrEx.Size = new System.Drawing.Size(13, 13);
+            this.labelNrEx.TabIndex = 14;
+            this.labelNrEx.Text = "0";
+            // 
+            // labelRightAnswers
+            // 
+            this.labelRightAnswers.AutoSize = true;
+            this.labelRightAnswers.Location = new System.Drawing.Point(97, 127);
+            this.labelRightAnswers.Name = "labelRightAnswers";
+            this.labelRightAnswers.Size = new System.Drawing.Size(13, 13);
+            this.labelRightAnswers.TabIndex = 15;
+            this.labelRightAnswers.Text = "0";
+            // 
+            // labelWrongAnswers
+            // 
+            this.labelWrongAnswers.AutoSize = true;
+            this.labelWrongAnswers.Location = new System.Drawing.Point(98, 152);
+            this.labelWrongAnswers.Name = "labelWrongAnswers";
+            this.labelWrongAnswers.Size = new System.Drawing.Size(13, 13);
+            this.labelWrongAnswers.TabIndex = 16;
+            this.labelWrongAnswers.Text = "0";
             // 
             // Form1
             // 
@@ -502,6 +557,11 @@ namespace MorseCourse
         private System.Windows.Forms.RadioButton radioButtonTranslateTo;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.Label labelWrongAnswers;
+        private System.Windows.Forms.Label labelRightAnswers;
+        private System.Windows.Forms.Label labelNrEx;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label9;
     }
 }
 

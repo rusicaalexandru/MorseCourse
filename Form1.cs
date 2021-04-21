@@ -63,16 +63,17 @@ namespace MorseCourse
         //------------------------------------------------------------------------------------------------Tests
         private void buttonStartTest_Click(object sender, EventArgs e)
         {
-            //numericUpDownExercises;
-            //labelTest.Text = Convert.ToString(numericUpDownExercises.Value);
+            //clear preview test
+            Test.score = 0;
+            Test.wrong = 0;
+            //------------------
+
             //https://randomwordgenerator.com/sentence.php to  parse it and get random sentencies
             for (int i = 0; i < numericUpDownExercises.Value; i++)
             {
                 Test test1 = new Test();// inserted nr of exercises and the average length
-
             }
-            //use for for amount of exercises,
-            //create and open form
+
             //after pressing continue on form : form closes and creates another one with another word in it
 
         }

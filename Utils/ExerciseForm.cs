@@ -16,5 +16,17 @@ namespace MorseCourse.Utils
         {
             InitializeComponent();
         }
+        bool answer;
+        private void buttonAnswer_Click(object sender, EventArgs e)
+        {
+            if (answer)//evaluate the answer
+            {
+                Test.score++;
+            }
+            else
+            {
+                Test.wrong++;
+            }
+        }
     }
 }

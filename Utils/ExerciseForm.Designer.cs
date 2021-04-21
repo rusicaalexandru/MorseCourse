@@ -61,6 +61,7 @@ namespace MorseCourse.Utils
             this.buttonAnswer.TabIndex = 2;
             this.buttonAnswer.Text = "Answer";
             this.buttonAnswer.UseVisualStyleBackColor = true;
+            this.buttonAnswer.Click += new System.EventHandler(this.buttonAnswer_Click);
             // 
             // richTextBoxTest
             // 
