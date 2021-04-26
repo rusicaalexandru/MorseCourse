@@ -12,33 +12,44 @@ namespace MorseCourse.Utils
 {
     public partial class ExerciseForm : Form
     {
-        public ExerciseForm()
+        string translate;
+        public ExerciseForm(string toTranslate)
         {
             InitializeComponent();
+            translate = toTranslate;
         }
         private void ExerciseForm_Load(object sender, EventArgs e)
         {
-            //richTextBoxTest.Text = test text;
+            richTextBoxTest.Text = translate;//
         }
         private void buttonAnswer_Click(object sender, EventArgs e)
         {
-            string pcTranslate = Translate.translateToMorse(richTextBoxTest.Text); //(text)
+            string rightTranslate = Translate.translateToMorse(richTextBoxTest.Text); //(text)
             // fix validation, (makes unnecesarry to add ' ' at the end of the answer in order to validate corectly)
-            if (textBoxAnswer.Text[textBoxAnswer.Text.Length - 1] != ' ')
+            if (textBoxAnswer.Text != string.Empty)
             {
-                textBoxAnswer.Text += ' ';
+                if (textBoxAnswer.Text[textBoxAnswer.Text.Length - 1] != ' ')
+                {
+                    textBoxAnswer.Text += ' ';
+                }
             }
-            if (pcTranslate == textBoxAnswer.Text) // verification of the answer
+            else if (textBoxAnswer.Text == string.Empty)
+            {
+                MessageBox.Show("At least try");
+            }
+
+            if (rightTranslate == textBoxAnswer.Text) // verification of the answer
             {
                 Test.score++;
                 MessageBox.Show("right");
+                //this.Close(); //remporar coment for test sakes
             }
             else
             {
                 Test.wrong++;
                 MessageBox.Show("wrong");
+                //this.Close(); //remporar coment for test sakes
             }
-            //this.Close();
         }
 
 
