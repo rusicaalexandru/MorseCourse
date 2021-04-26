@@ -83,6 +83,7 @@ namespace MorseCourse.Utils
             this.Controls.Add(this.textBoxAnswer);
             this.Name = "ExerciseForm";
             this.Text = "ExerciseForm";
+            this.Load += new System.EventHandler(this.ExerciseForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

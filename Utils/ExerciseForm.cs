@@ -16,7 +16,10 @@ namespace MorseCourse.Utils
         {
             InitializeComponent();
         }
-
+        private void ExerciseForm_Load(object sender, EventArgs e)
+        {
+            //richTextBoxTest.Text = test text;
+        }
         private void buttonAnswer_Click(object sender, EventArgs e)
         {
             string pcTranslate = Translate.translateToMorse(richTextBoxTest.Text); //(text)
@@ -37,5 +40,7 @@ namespace MorseCourse.Utils
             }
             //this.Close();
         }
+
+
     }
 }
