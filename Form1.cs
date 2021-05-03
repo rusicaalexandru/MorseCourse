@@ -58,6 +58,15 @@ namespace MorseCourse
         {
             textBoxOutputText.Text = string.Empty;
         }
+        private void buttonReport_Click(object sender, EventArgs e)
+        {
+            new ReportForm().Show();
+        }
+        //---------------------------------------------------------------------
+        private void buttonPlayMorseSound1_Click(object sender, EventArgs e)
+        {
+
+        }
 
         //------------------------------------------------------------------------------------------------Translate
         //------------------------------------------------------------------------------------------------Info
@@ -67,12 +76,13 @@ namespace MorseCourse
         private void buttonStartTest_Click(object sender, EventArgs e) // start button on test tab
         {
             string ownResponse = ownClient.GetStringAsync(url).Result;
-            Rootobject obj = JsonConvert.DeserializeObject<Rootobject>(ownResponse);
-            //labelForTeste.Text = obj.data[3].sentence;
+            DB_JSON_TESTS obj = JsonConvert.DeserializeObject<DB_JSON_TESTS>(ownResponse);
+
+            int amountExercises = Convert.ToInt32(numericUpDownExercises.Value);
 
             //To Do ============================
-            //register resultats in a database (easy)
-            //report button (hard)
+            //register resultats in a database -- (med)
+            //report button (med)
             //To Do ============================
 
             //---------clear preview test
@@ -81,17 +91,20 @@ namespace MorseCourse
             Test.skiped = 0;
             //------------------
 
-            if (numericUpDownExercises.Value <= 0 || numericUpDownExercises.Value > 10) //set min and max amount of exercises (10 mox, to not overload PC)
+            if (amountExercises <= 0 || amountExercises > 10) //set min and max amount of exercises (10 mox, to not overload PC)
             {
-                numericUpDownExercises.Value = 1;
+                amountExercises = 1;
             }
-            for (int i = 0; i < numericUpDownExercises.Value; i++) //create test form
+            for (int i = 0; i < amountExercises; i++) //create test form
             {
-                new Test("hello");// input strig to translate (it applies to each test)
-                Random rnd = new Random();
-                //new Test(obj.data[rnd.Next(obj.data.Length)].sentence.Trim(',', '.', '!', '?', '`'));// input strig to translate (it applies to each test)
+                //new Test("Hello");// input strig to translate (it applies to each test)
+                new Test(obj.data[new Random().Next(obj.data.Length)].sentence.Trim(',', '.', '!', '?', '`'));// input strig to translate (it applies to each test)
+                Test.id++;
             }
+            dataGridView1.Rows.Add(Test.id, amountExercises, Test.score, Test.wrong, Test.skiped);
         }
+
+
         //------------------------------------------------------------------------------------------------Tests
     }
 }

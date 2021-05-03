@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace MorseCourse.Utils
 {
-    public class Rootobject
+    public class DB_JSON_TESTS
     {
         public Datum[] data { get; set; }
     }

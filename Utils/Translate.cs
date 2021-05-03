@@ -11,7 +11,7 @@ namespace MorseCourse.Utils
 
         public static string translateToMorse(string letters)
         {
-            letters = letters.ToLower(); // ERROR (NEED FIX)
+            letters = letters.ToLower(); //to translate corectly
             string output = string.Empty;
 
             for (int i = 0; i < letters.Length; i++)

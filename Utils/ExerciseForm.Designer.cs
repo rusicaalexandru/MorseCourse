@@ -33,6 +33,7 @@ namespace MorseCourse.Utils
             this.label1 = new System.Windows.Forms.Label();
             this.buttonAnswer = new System.Windows.Forms.Button();
             this.richTextBoxTest = new System.Windows.Forms.RichTextBox();
+            this.buttonSkip = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // textBoxAnswer
@@ -57,7 +58,7 @@ namespace MorseCourse.Utils
             // 
             this.buttonAnswer.Location = new System.Drawing.Point(12, 442);
             this.buttonAnswer.Name = "buttonAnswer";
-            this.buttonAnswer.Size = new System.Drawing.Size(528, 23);
+            this.buttonAnswer.Size = new System.Drawing.Size(409, 23);
             this.buttonAnswer.TabIndex = 2;
             this.buttonAnswer.Text = "Answer";
             this.buttonAnswer.UseVisualStyleBackColor = true;
@@ -72,15 +73,27 @@ namespace MorseCourse.Utils
             this.richTextBoxTest.TabIndex = 3;
             this.richTextBoxTest.Text = "text to be translated";
             // 
+            // buttonSkip
+            // 
+            this.buttonSkip.Location = new System.Drawing.Point(427, 442);
+            this.buttonSkip.Name = "buttonSkip";
+            this.buttonSkip.Size = new System.Drawing.Size(113, 23);
+            this.buttonSkip.TabIndex = 4;
+            this.buttonSkip.Text = "Skip";
+            this.buttonSkip.UseVisualStyleBackColor = true;
+            this.buttonSkip.Click += new System.EventHandler(this.buttonSkip_Click);
+            // 
             // ExerciseForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(552, 477);
+            this.Controls.Add(this.buttonSkip);
             this.Controls.Add(this.richTextBoxTest);
             this.Controls.Add(this.buttonAnswer);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBoxAnswer);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ExerciseForm";
             this.Text = "ExerciseForm";
             this.Load += new System.EventHandler(this.ExerciseForm_Load);
@@ -95,5 +108,6 @@ namespace MorseCourse.Utils
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button buttonAnswer;
         private System.Windows.Forms.RichTextBox richTextBoxTest;
+        private System.Windows.Forms.Button buttonSkip;
     }
 }

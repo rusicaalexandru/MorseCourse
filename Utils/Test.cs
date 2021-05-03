@@ -8,6 +8,7 @@ namespace MorseCourse.Utils
 {
     public class Test
     {
+        public static int id = 0;
         public static int score = 0;
         public static int wrong = 0;
         public static int skiped = 0;
