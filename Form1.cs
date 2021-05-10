@@ -90,7 +90,6 @@ namespace MorseCourse
             Test.wrong = 0;
             Test.skiped = 0;
             //------------------
-
             if (amountExercises <= 0 || amountExercises > 10) //set min and max amount of exercises (10 mox, to not overload PC)
             {
                 amountExercises = 1;
@@ -99,9 +98,9 @@ namespace MorseCourse
             {
                 //new Test("Hello");// input strig to translate (it applies to each test)
                 new Test(obj.data[new Random().Next(obj.data.Length)].sentence.Trim(',', '.', '!', '?', '`'));// input strig to translate (it applies to each test)
-                Test.id++;
             }
-            dataGridView1.Rows.Add(Test.id, amountExercises, Test.score, Test.wrong, Test.skiped);
+            Test.id++;
+            dataGridView1.Rows.Add(Test.id, amountExercises, Test.score, Test.wrong, Test.skiped/*result in %*/);
         }
 
 

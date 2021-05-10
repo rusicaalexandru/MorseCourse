@@ -29,17 +29,17 @@ namespace MorseCourse.Utils
         /// </summary>
         private void InitializeComponent()
         {
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.richTextBoxReport = new System.Windows.Forms.RichTextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // richTextBox1
+            // richTextBoxReport
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(12, 12);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(411, 369);
-            this.richTextBox1.TabIndex = 0;
-            this.richTextBox1.Text = "";
+            this.richTextBoxReport.Location = new System.Drawing.Point(12, 12);
+            this.richTextBoxReport.Name = "richTextBoxReport";
+            this.richTextBoxReport.Size = new System.Drawing.Size(411, 369);
+            this.richTextBoxReport.TabIndex = 0;
+            this.richTextBoxReport.Text = "";
             // 
             // button1
             // 
@@ -49,6 +49,7 @@ namespace MorseCourse.Utils
             this.button1.TabIndex = 1;
             this.button1.Text = "Send";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // ReportForm
             // 
@@ -56,16 +57,17 @@ namespace MorseCourse.Utils
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(435, 422);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.richTextBox1);
+            this.Controls.Add(this.richTextBoxReport);
             this.Name = "ReportForm";
             this.Text = "ReportForm";
+            this.Load += new System.EventHandler(this.ReportForm_Load);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.RichTextBox richTextBoxReport;
         private System.Windows.Forms.Button button1;
     }
 }
