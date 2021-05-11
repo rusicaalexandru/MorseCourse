@@ -1,22 +1,9 @@
 ﻿using MorseCourse.Utils;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Net;
 using System.Net.Http;
 using Newtonsoft.Json;
-using System.Collections.Generic;
-using System.Linq;
-using Newtonsoft.Json.Linq;
-using Intercom.Core;
-using RestSharp;
+
 
 namespace MorseCourse
 {
@@ -69,9 +56,6 @@ namespace MorseCourse
         }
 
         //------------------------------------------------------------------------------------------------Translate
-        //------------------------------------------------------------------------------------------------Info
-
-        //------------------------------------------------------------------------------------------------Info
         //------------------------------------------------------------------------------------------------Tests
         private void buttonStartTest_Click(object sender, EventArgs e) // start button on test tab
         {
@@ -80,12 +64,7 @@ namespace MorseCourse
 
             int amountExercises = Convert.ToInt32(numericUpDownExercises.Value);
 
-            //To Do ============================
-            //register resultats in a database -- (med)
-            //report button (med)
-            //To Do ============================
-
-            //---------clear preview test
+            //---------clear preview test data
             Test.score = 0;
             Test.wrong = 0;
             Test.skiped = 0;
@@ -100,9 +79,8 @@ namespace MorseCourse
                 new Test(obj.data[new Random().Next(obj.data.Length)].sentence.Trim(',', '.', '!', '?', '`'));// input strig to translate (it applies to each test)
             }
             Test.id++;
-            dataGridView1.Rows.Add(Test.id, amountExercises, Test.score, Test.wrong, Test.skiped/*result in %*/);
+            dataGridView1.Rows.Add(Test.id, amountExercises, Test.score, Test.wrong, Test.skiped, Test.score + (Test.wrong * 0 + Test.skiped * 0) / amountExercises + " %");
         }
-
 
         //------------------------------------------------------------------------------------------------Tests
     }

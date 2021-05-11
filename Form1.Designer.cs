@@ -32,6 +32,7 @@ namespace MorseCourse
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.buttonReport = new System.Windows.Forms.Button();
             this.labelForTeste = new System.Windows.Forms.Label();
             this.buttonStopSound1 = new System.Windows.Forms.Button();
             this.buttonStopSound2 = new System.Windows.Forms.Button();
@@ -57,29 +58,25 @@ namespace MorseCourse
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.radioButtonTranslateToABC = new System.Windows.Forms.RadioButton();
-            this.radioButtonTranslateToMorse = new System.Windows.Forms.RadioButton();
-            this.label8 = new System.Windows.Forms.Label();
-            this.buttonStartTest = new System.Windows.Forms.Button();
-            this.label7 = new System.Windows.Forms.Label();
-            this.numericUpDownExercises = new System.Windows.Forms.NumericUpDown();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.tabPage5 = new System.Windows.Forms.TabPage();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.grid_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.grid_nrEx = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.grid_AnswersRight = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.grid_AnswersWrong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.grid_Skipped = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.buttonReport = new System.Windows.Forms.Button();
+            this.buttonStartTest = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.numericUpDownExercises = new System.Windows.Forms.NumericUpDown();
+            this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.resultColum = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabPage3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownExercises)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownExercises)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -90,7 +87,6 @@ namespace MorseCourse
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
-            this.tabControl1.Controls.Add(this.tabPage4);
             this.tabControl1.Controls.Add(this.tabPage5);
             this.tabControl1.Location = new System.Drawing.Point(-2, -1);
             this.tabControl1.Name = "tabControl1";
@@ -128,17 +124,30 @@ namespace MorseCourse
             this.tabPage1.Text = "Translate";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // buttonReport
+            // 
+            this.buttonReport.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonReport.Location = new System.Drawing.Point(711, 365);
+            this.buttonReport.Name = "buttonReport";
+            this.buttonReport.Size = new System.Drawing.Size(75, 23);
+            this.buttonReport.TabIndex = 20;
+            this.buttonReport.Text = "Report";
+            this.buttonReport.UseVisualStyleBackColor = true;
+            this.buttonReport.Click += new System.EventHandler(this.buttonReport_Click);
+            // 
             // labelForTeste
             // 
+            this.labelForTeste.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.labelForTeste.AutoSize = true;
-            this.labelForTeste.Location = new System.Drawing.Point(53, 252);
+            this.labelForTeste.Location = new System.Drawing.Point(639, 365);
             this.labelForTeste.Name = "labelForTeste";
-            this.labelForTeste.Size = new System.Drawing.Size(41, 13);
+            this.labelForTeste.Size = new System.Drawing.Size(54, 13);
             this.labelForTeste.TabIndex = 19;
-            this.labelForTeste.Text = "label12";
+            this.labelForTeste.Text = "TestLabel";
             // 
             // buttonStopSound1
             // 
+            this.buttonStopSound1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonStopSound1.Location = new System.Drawing.Point(716, 39);
             this.buttonStopSound1.Name = "buttonStopSound1";
             this.buttonStopSound1.Size = new System.Drawing.Size(46, 23);
@@ -148,6 +157,7 @@ namespace MorseCourse
             // 
             // buttonStopSound2
             // 
+            this.buttonStopSound2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonStopSound2.Location = new System.Drawing.Point(716, 158);
             this.buttonStopSound2.Name = "buttonStopSound2";
             this.buttonStopSound2.Size = new System.Drawing.Size(46, 23);
@@ -157,6 +167,7 @@ namespace MorseCourse
             // 
             // buttonPlayMorseSound2
             // 
+            this.buttonPlayMorseSound2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonPlayMorseSound2.Location = new System.Drawing.Point(675, 158);
             this.buttonPlayMorseSound2.Name = "buttonPlayMorseSound2";
             this.buttonPlayMorseSound2.Size = new System.Drawing.Size(35, 23);
@@ -166,6 +177,7 @@ namespace MorseCourse
             // 
             // buttonPlayMorseSound1
             // 
+            this.buttonPlayMorseSound1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonPlayMorseSound1.Location = new System.Drawing.Point(675, 39);
             this.buttonPlayMorseSound1.Name = "buttonPlayMorseSound1";
             this.buttonPlayMorseSound1.Size = new System.Drawing.Size(35, 23);
@@ -176,6 +188,7 @@ namespace MorseCourse
             // 
             // buttonClearMorseTr
             // 
+            this.buttonClearMorseTr.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonClearMorseTr.Location = new System.Drawing.Point(675, 187);
             this.buttonClearMorseTr.Name = "buttonClearMorseTr";
             this.buttonClearMorseTr.Size = new System.Drawing.Size(87, 23);
@@ -186,6 +199,7 @@ namespace MorseCourse
             // 
             // buttonClearTextTr
             // 
+            this.buttonClearTextTr.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonClearTextTr.Location = new System.Drawing.Point(675, 68);
             this.buttonClearTextTr.Name = "buttonClearTextTr";
             this.buttonClearTextTr.Size = new System.Drawing.Size(87, 23);
@@ -196,6 +210,7 @@ namespace MorseCourse
             // 
             // buttonTranslateToText
             // 
+            this.buttonTranslateToText.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonTranslateToText.Location = new System.Drawing.Point(675, 128);
             this.buttonTranslateToText.Name = "buttonTranslateToText";
             this.buttonTranslateToText.Size = new System.Drawing.Size(87, 23);
@@ -206,6 +221,8 @@ namespace MorseCourse
             // 
             // textBoxOutputText
             // 
+            this.textBoxOutputText.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxOutputText.Location = new System.Drawing.Point(56, 187);
             this.textBoxOutputText.Name = "textBoxOutputText";
             this.textBoxOutputText.ReadOnly = true;
@@ -232,6 +249,8 @@ namespace MorseCourse
             // 
             // textBoxInputMorse
             // 
+            this.textBoxInputMorse.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxInputMorse.Font = new System.Drawing.Font("Sitka Small", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxInputMorse.Location = new System.Drawing.Point(56, 130);
             this.textBoxInputMorse.Name = "textBoxInputMorse";
@@ -240,6 +259,7 @@ namespace MorseCourse
             // 
             // buttonTranslateToMorse
             // 
+            this.buttonTranslateToMorse.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonTranslateToMorse.Location = new System.Drawing.Point(675, 7);
             this.buttonTranslateToMorse.Name = "buttonTranslateToMorse";
             this.buttonTranslateToMorse.Size = new System.Drawing.Size(87, 23);
@@ -250,6 +270,8 @@ namespace MorseCourse
             // 
             // textBoxOutputMorse
             // 
+            this.textBoxOutputMorse.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxOutputMorse.Font = new System.Drawing.Font("Sitka Small", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxOutputMorse.Location = new System.Drawing.Point(56, 40);
             this.textBoxOutputMorse.Name = "textBoxOutputMorse";
@@ -277,6 +299,8 @@ namespace MorseCourse
             // 
             // textBoxInputText
             // 
+            this.textBoxInputText.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxInputText.Location = new System.Drawing.Point(56, 9);
             this.textBoxInputText.Name = "textBoxInputText";
             this.textBoxInputText.Size = new System.Drawing.Size(613, 20);
@@ -285,7 +309,8 @@ namespace MorseCourse
             // 
             // buttonTest
             // 
-            this.buttonTest.Location = new System.Drawing.Point(606, 371);
+            this.buttonTest.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonTest.Location = new System.Drawing.Point(630, 394);
             this.buttonTest.Name = "buttonTest";
             this.buttonTest.Size = new System.Drawing.Size(75, 23);
             this.buttonTest.TabIndex = 2;
@@ -296,7 +321,7 @@ namespace MorseCourse
             // buttonClearCurent
             // 
             this.buttonClearCurent.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonClearCurent.Location = new System.Drawing.Point(698, 371);
+            this.buttonClearCurent.Location = new System.Drawing.Point(711, 394);
             this.buttonClearCurent.Name = "buttonClearCurent";
             this.buttonClearCurent.Size = new System.Drawing.Size(75, 23);
             this.buttonClearCurent.TabIndex = 1;
@@ -364,9 +389,6 @@ namespace MorseCourse
             // tabPage3
             // 
             this.tabPage3.Controls.Add(this.dataGridView1);
-            this.tabPage3.Controls.Add(this.radioButtonTranslateToABC);
-            this.tabPage3.Controls.Add(this.radioButtonTranslateToMorse);
-            this.tabPage3.Controls.Add(this.label8);
             this.tabPage3.Controls.Add(this.buttonStartTest);
             this.tabPage3.Controls.Add(this.label7);
             this.tabPage3.Controls.Add(this.numericUpDownExercises);
@@ -377,84 +399,11 @@ namespace MorseCourse
             this.tabPage3.Text = "Tests";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
-            // radioButtonTranslateToABC
-            // 
-            this.radioButtonTranslateToABC.AutoSize = true;
-            this.radioButtonTranslateToABC.Location = new System.Drawing.Point(126, 26);
-            this.radioButtonTranslateToABC.Name = "radioButtonTranslateToABC";
-            this.radioButtonTranslateToABC.Size = new System.Drawing.Size(110, 17);
-            this.radioButtonTranslateToABC.TabIndex = 11;
-            this.radioButtonTranslateToABC.Text = "ABC (notWorking)";
-            this.radioButtonTranslateToABC.UseVisualStyleBackColor = true;
-            // 
-            // radioButtonTranslateToMorse
-            // 
-            this.radioButtonTranslateToMorse.AutoSize = true;
-            this.radioButtonTranslateToMorse.Checked = true;
-            this.radioButtonTranslateToMorse.Location = new System.Drawing.Point(69, 26);
-            this.radioButtonTranslateToMorse.Name = "radioButtonTranslateToMorse";
-            this.radioButtonTranslateToMorse.Size = new System.Drawing.Size(54, 17);
-            this.radioButtonTranslateToMorse.TabIndex = 10;
-            this.radioButtonTranslateToMorse.TabStop = true;
-            this.radioButtonTranslateToMorse.Text = "Morse";
-            this.radioButtonTranslateToMorse.UseVisualStyleBackColor = true;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(3, 26);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(69, 13);
-            this.label8.TabIndex = 9;
-            this.label8.Text = "Translate to :";
-            // 
-            // buttonStartTest
-            // 
-            this.buttonStartTest.Location = new System.Drawing.Point(23, 56);
-            this.buttonStartTest.Name = "buttonStartTest";
-            this.buttonStartTest.Size = new System.Drawing.Size(75, 23);
-            this.buttonStartTest.TabIndex = 7;
-            this.buttonStartTest.Text = "Start";
-            this.buttonStartTest.UseVisualStyleBackColor = true;
-            this.buttonStartTest.Click += new System.EventHandler(this.buttonStartTest_Click);
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(129, 5);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(107, 13);
-            this.label7.TabIndex = 3;
-            this.label7.Text = ": number of exercises";
-            // 
-            // numericUpDownExercises
-            // 
-            this.numericUpDownExercises.Location = new System.Drawing.Point(3, 3);
-            this.numericUpDownExercises.Name = "numericUpDownExercises";
-            this.numericUpDownExercises.Size = new System.Drawing.Size(120, 20);
-            this.numericUpDownExercises.TabIndex = 2;
-            // 
-            // tabPage4
-            // 
-            this.tabPage4.Location = new System.Drawing.Point(4, 22);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(793, 425);
-            this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "Online";
-            this.tabPage4.UseVisualStyleBackColor = true;
-            // 
-            // tabPage5
-            // 
-            this.tabPage5.Location = new System.Drawing.Point(4, 22);
-            this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(793, 425);
-            this.tabPage5.TabIndex = 4;
-            this.tabPage5.Text = "Tutorial";
-            this.tabPage5.UseVisualStyleBackColor = true;
-            // 
             // dataGridView1
             // 
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -463,7 +412,8 @@ namespace MorseCourse
             this.grid_nrEx,
             this.grid_AnswersRight,
             this.grid_AnswersWrong,
-            this.grid_Skipped});
+            this.grid_Skipped,
+            this.resultColum});
             this.dataGridView1.Location = new System.Drawing.Point(242, 5);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(544, 412);
@@ -499,15 +449,47 @@ namespace MorseCourse
             this.grid_Skipped.Name = "grid_Skipped";
             this.grid_Skipped.ReadOnly = true;
             // 
-            // buttonReport
+            // buttonStartTest
             // 
-            this.buttonReport.Location = new System.Drawing.Point(687, 342);
-            this.buttonReport.Name = "buttonReport";
-            this.buttonReport.Size = new System.Drawing.Size(75, 23);
-            this.buttonReport.TabIndex = 20;
-            this.buttonReport.Text = "Report";
-            this.buttonReport.UseVisualStyleBackColor = true;
-            this.buttonReport.Click += new System.EventHandler(this.buttonReport_Click);
+            this.buttonStartTest.Location = new System.Drawing.Point(10, 47);
+            this.buttonStartTest.Name = "buttonStartTest";
+            this.buttonStartTest.Size = new System.Drawing.Size(75, 23);
+            this.buttonStartTest.TabIndex = 7;
+            this.buttonStartTest.Text = "Start";
+            this.buttonStartTest.UseVisualStyleBackColor = true;
+            this.buttonStartTest.Click += new System.EventHandler(this.buttonStartTest_Click);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(129, 23);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(107, 13);
+            this.label7.TabIndex = 3;
+            this.label7.Text = ": number of exercises";
+            // 
+            // numericUpDownExercises
+            // 
+            this.numericUpDownExercises.Location = new System.Drawing.Point(10, 21);
+            this.numericUpDownExercises.Name = "numericUpDownExercises";
+            this.numericUpDownExercises.Size = new System.Drawing.Size(120, 20);
+            this.numericUpDownExercises.TabIndex = 2;
+            // 
+            // tabPage5
+            // 
+            this.tabPage5.Location = new System.Drawing.Point(4, 22);
+            this.tabPage5.Name = "tabPage5";
+            this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage5.Size = new System.Drawing.Size(793, 425);
+            this.tabPage5.TabIndex = 4;
+            this.tabPage5.Text = "Tutorial";
+            this.tabPage5.UseVisualStyleBackColor = true;
+            // 
+            // resultColum
+            // 
+            this.resultColum.HeaderText = "Result";
+            this.resultColum.Name = "resultColum";
+            this.resultColum.ReadOnly = true;
             // 
             // Form1
             // 
@@ -527,8 +509,8 @@ namespace MorseCourse
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownExercises)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownExercises)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -539,7 +521,6 @@ namespace MorseCourse
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.TabPage tabPage3;
-        private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button buttonClearCurent;
         private System.Windows.Forms.Button buttonTest;
@@ -566,9 +547,6 @@ namespace MorseCourse
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.NumericUpDown numericUpDownExercises;
         private System.Windows.Forms.Button buttonStartTest;
-        private System.Windows.Forms.RadioButton radioButtonTranslateToMorse;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.RadioButton radioButtonTranslateToABC;
         private System.Windows.Forms.Label labelForTeste;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn grid_ID;
@@ -577,6 +555,7 @@ namespace MorseCourse
         private System.Windows.Forms.DataGridViewTextBoxColumn grid_AnswersWrong;
         private System.Windows.Forms.DataGridViewTextBoxColumn grid_Skipped;
         private System.Windows.Forms.Button buttonReport;
+        private System.Windows.Forms.DataGridViewTextBoxColumn resultColum;
     }
 }
 

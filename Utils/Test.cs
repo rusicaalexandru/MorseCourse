@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace MorseCourse.Utils
+﻿namespace MorseCourse.Utils
 {
     public class Test
     {
@@ -14,9 +8,7 @@ namespace MorseCourse.Utils
         public static int skiped = 0;
         public Test(string toTranslate)
         {
-            /*ExerciseForm ex = */
-            new ExerciseForm(toTranslate).ShowDialog();
-            //ex.ShowDialog(); //instead of show, it waits until the form is closed
+            new ExerciseForm(toTranslate).ShowDialog();//ShowDialog instead of show, it waits until the form is closed
         }
     }
 }

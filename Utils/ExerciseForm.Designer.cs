@@ -47,6 +47,7 @@ namespace MorseCourse.Utils
             // 
             // label1
             // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(12, 392);
             this.label1.Name = "label1";
@@ -56,6 +57,8 @@ namespace MorseCourse.Utils
             // 
             // buttonAnswer
             // 
+            this.buttonAnswer.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonAnswer.Location = new System.Drawing.Point(12, 442);
             this.buttonAnswer.Name = "buttonAnswer";
             this.buttonAnswer.Size = new System.Drawing.Size(409, 23);
@@ -66,6 +69,8 @@ namespace MorseCourse.Utils
             // 
             // richTextBoxTest
             // 
+            this.richTextBoxTest.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.richTextBoxTest.Location = new System.Drawing.Point(12, 12);
             this.richTextBoxTest.Name = "richTextBoxTest";
             this.richTextBoxTest.ReadOnly = true;
@@ -75,6 +80,7 @@ namespace MorseCourse.Utils
             // 
             // buttonSkip
             // 
+            this.buttonSkip.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonSkip.Location = new System.Drawing.Point(427, 442);
             this.buttonSkip.Name = "buttonSkip";
             this.buttonSkip.Size = new System.Drawing.Size(113, 23);
