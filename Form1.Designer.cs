@@ -64,11 +64,11 @@ namespace MorseCourse
             this.grid_AnswersRight = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.grid_AnswersWrong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.grid_Skipped = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.resultColum = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.buttonStartTest = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.numericUpDownExercises = new System.Windows.Forms.NumericUpDown();
             this.tabPage5 = new System.Windows.Forms.TabPage();
-            this.resultColum = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -154,6 +154,7 @@ namespace MorseCourse
             this.buttonStopSound1.TabIndex = 18;
             this.buttonStopSound1.Text = "Stop";
             this.buttonStopSound1.UseVisualStyleBackColor = true;
+            this.buttonStopSound1.Click += new System.EventHandler(this.buttonStopSound1_Click);
             // 
             // buttonStopSound2
             // 
@@ -449,6 +450,12 @@ namespace MorseCourse
             this.grid_Skipped.Name = "grid_Skipped";
             this.grid_Skipped.ReadOnly = true;
             // 
+            // resultColum
+            // 
+            this.resultColum.HeaderText = "Result";
+            this.resultColum.Name = "resultColum";
+            this.resultColum.ReadOnly = true;
+            // 
             // buttonStartTest
             // 
             this.buttonStartTest.Location = new System.Drawing.Point(10, 47);
@@ -484,12 +491,6 @@ namespace MorseCourse
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "Tutorial";
             this.tabPage5.UseVisualStyleBackColor = true;
-            // 
-            // resultColum
-            // 
-            this.resultColum.HeaderText = "Result";
-            this.resultColum.Name = "resultColum";
-            this.resultColum.ReadOnly = true;
             // 
             // Form1
             // 

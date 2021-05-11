@@ -5,7 +5,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{82352F7A-750F-4FE6-83A4-A492D302BF94}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <OutputType>WinExe</OutputType>
     <RootNamespace>MorseCourse</RootNamespace>
     <AssemblyName>MorseCourse</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
