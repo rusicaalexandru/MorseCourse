@@ -12,7 +12,7 @@ namespace MorseCourse
     {
         private const string url = "https://randomwordgenerator.com/json/sentences.json";//get exercises
         HttpClient ownClient = new HttpClient();
-
+        private bool stopPlaying = false;
         public Form1()
         {
             InitializeComponent();
@@ -56,11 +56,12 @@ namespace MorseCourse
         //------------------------------------------------------------------------------------------------Sounds
         private async void buttonPlayMorseSound1_Click(object sender, EventArgs e)
         {
+            stopPlaying = true; //make the prew sound to stop before start another
             await toSound(textBoxOutputMorse.Text);
         }
         private void buttonStopSound1_Click(object sender, EventArgs e)
         {
-
+            stopPlaying = true; //make the sound to stop
         }
         //------------------------------------------------------------------------------------------------Sounds
         //------------------------------------------------------------------------------------------------Tests
@@ -92,10 +93,11 @@ namespace MorseCourse
         //------------------------------------------------------------------------------------------------Tests
         private Task toSound(string text)
         {
+            int freq = 500;
+            int duration = 150;
             return Task.Factory.StartNew(() =>
             {
-                int freq = 500;
-                int duration = 150;
+
                 for (int i = 0; i < text.Length; i++)
                 {
                     if (text[i] == '.')
@@ -110,6 +112,11 @@ namespace MorseCourse
                     else if (text[i] == ' ')
                     {
                         Thread.Sleep(500);//no sound for blank space
+                    }
+                    if (stopPlaying)//stop playing sound
+                    {
+                        stopPlaying = false;//refresh the boolean to be ready for another use
+                        return;//breaks the task
                     }
                 }
             });
@@ -165,10 +172,6 @@ namespace MorseCourse
                 Console.Beep(466, 150);
                 Console.Beep(523, 150);
             });
-
         }
-
-
     }
-
 }

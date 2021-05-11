@@ -35,8 +35,6 @@ namespace MorseCourse
             this.buttonReport = new System.Windows.Forms.Button();
             this.labelForTeste = new System.Windows.Forms.Label();
             this.buttonStopSound1 = new System.Windows.Forms.Button();
-            this.buttonStopSound2 = new System.Windows.Forms.Button();
-            this.buttonPlayMorseSound2 = new System.Windows.Forms.Button();
             this.buttonPlayMorseSound1 = new System.Windows.Forms.Button();
             this.buttonClearMorseTr = new System.Windows.Forms.Button();
             this.buttonClearTextTr = new System.Windows.Forms.Button();
@@ -99,8 +97,6 @@ namespace MorseCourse
             this.tabPage1.Controls.Add(this.buttonReport);
             this.tabPage1.Controls.Add(this.labelForTeste);
             this.tabPage1.Controls.Add(this.buttonStopSound1);
-            this.tabPage1.Controls.Add(this.buttonStopSound2);
-            this.tabPage1.Controls.Add(this.buttonPlayMorseSound2);
             this.tabPage1.Controls.Add(this.buttonPlayMorseSound1);
             this.tabPage1.Controls.Add(this.buttonClearMorseTr);
             this.tabPage1.Controls.Add(this.buttonClearTextTr);
@@ -156,26 +152,6 @@ namespace MorseCourse
             this.buttonStopSound1.UseVisualStyleBackColor = true;
             this.buttonStopSound1.Click += new System.EventHandler(this.buttonStopSound1_Click);
             // 
-            // buttonStopSound2
-            // 
-            this.buttonStopSound2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonStopSound2.Location = new System.Drawing.Point(716, 158);
-            this.buttonStopSound2.Name = "buttonStopSound2";
-            this.buttonStopSound2.Size = new System.Drawing.Size(46, 23);
-            this.buttonStopSound2.TabIndex = 17;
-            this.buttonStopSound2.Text = "Stop";
-            this.buttonStopSound2.UseVisualStyleBackColor = true;
-            // 
-            // buttonPlayMorseSound2
-            // 
-            this.buttonPlayMorseSound2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonPlayMorseSound2.Location = new System.Drawing.Point(675, 158);
-            this.buttonPlayMorseSound2.Name = "buttonPlayMorseSound2";
-            this.buttonPlayMorseSound2.Size = new System.Drawing.Size(35, 23);
-            this.buttonPlayMorseSound2.TabIndex = 16;
-            this.buttonPlayMorseSound2.Text = "Play";
-            this.buttonPlayMorseSound2.UseVisualStyleBackColor = true;
-            // 
             // buttonPlayMorseSound1
             // 
             this.buttonPlayMorseSound1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -214,7 +190,7 @@ namespace MorseCourse
             this.buttonTranslateToText.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonTranslateToText.Location = new System.Drawing.Point(675, 128);
             this.buttonTranslateToText.Name = "buttonTranslateToText";
-            this.buttonTranslateToText.Size = new System.Drawing.Size(87, 23);
+            this.buttonTranslateToText.Size = new System.Drawing.Size(87, 53);
             this.buttonTranslateToText.TabIndex = 12;
             this.buttonTranslateToText.Text = "Translate";
             this.buttonTranslateToText.UseVisualStyleBackColor = true;
@@ -538,10 +514,8 @@ namespace MorseCourse
         private System.Windows.Forms.TextBox textBoxInputMorse;
         private System.Windows.Forms.Button buttonClearMorseTr;
         private System.Windows.Forms.Button buttonClearTextTr;
-        private System.Windows.Forms.Button buttonPlayMorseSound2;
         private System.Windows.Forms.Button buttonPlayMorseSound1;
         private System.Windows.Forms.Button buttonStopSound1;
-        private System.Windows.Forms.Button buttonStopSound2;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.PictureBox pictureBox2;
