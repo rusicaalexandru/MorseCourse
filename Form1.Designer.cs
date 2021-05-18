@@ -66,7 +66,6 @@ namespace MorseCourse
             this.buttonStartTest = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.numericUpDownExercises = new System.Windows.Forms.NumericUpDown();
-            this.tabPage5 = new System.Windows.Forms.TabPage();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -85,7 +84,6 @@ namespace MorseCourse
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
-            this.tabControl1.Controls.Add(this.tabPage5);
             this.tabControl1.Location = new System.Drawing.Point(-2, -1);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -458,16 +456,6 @@ namespace MorseCourse
             this.numericUpDownExercises.Size = new System.Drawing.Size(120, 20);
             this.numericUpDownExercises.TabIndex = 2;
             // 
-            // tabPage5
-            // 
-            this.tabPage5.Location = new System.Drawing.Point(4, 22);
-            this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(793, 425);
-            this.tabPage5.TabIndex = 4;
-            this.tabPage5.Text = "Tutorial";
-            this.tabPage5.UseVisualStyleBackColor = true;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -506,7 +494,6 @@ namespace MorseCourse
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBoxInputText;
-        private System.Windows.Forms.TabPage tabPage5;
         private System.Windows.Forms.Button buttonTranslateToText;
         private System.Windows.Forms.TextBox textBoxOutputText;
         private System.Windows.Forms.Label label3;
