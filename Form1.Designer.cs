@@ -33,8 +33,6 @@ namespace MorseCourse
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.buttonReport = new System.Windows.Forms.Button();
-            this.labelForTeste = new System.Windows.Forms.Label();
-            this.buttonStopSound1 = new System.Windows.Forms.Button();
             this.buttonPlayMorseSound1 = new System.Windows.Forms.Button();
             this.buttonClearMorseTr = new System.Windows.Forms.Button();
             this.buttonClearTextTr = new System.Windows.Forms.Button();
@@ -48,8 +46,6 @@ namespace MorseCourse
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.textBoxInputText = new System.Windows.Forms.TextBox();
-            this.buttonTest = new System.Windows.Forms.Button();
-            this.buttonClearCurent = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -93,8 +89,6 @@ namespace MorseCourse
             // tabPage1
             // 
             this.tabPage1.Controls.Add(this.buttonReport);
-            this.tabPage1.Controls.Add(this.labelForTeste);
-            this.tabPage1.Controls.Add(this.buttonStopSound1);
             this.tabPage1.Controls.Add(this.buttonPlayMorseSound1);
             this.tabPage1.Controls.Add(this.buttonClearMorseTr);
             this.tabPage1.Controls.Add(this.buttonClearTextTr);
@@ -108,8 +102,6 @@ namespace MorseCourse
             this.tabPage1.Controls.Add(this.label2);
             this.tabPage1.Controls.Add(this.label1);
             this.tabPage1.Controls.Add(this.textBoxInputText);
-            this.tabPage1.Controls.Add(this.buttonTest);
-            this.tabPage1.Controls.Add(this.buttonClearCurent);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
@@ -121,7 +113,7 @@ namespace MorseCourse
             // buttonReport
             // 
             this.buttonReport.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonReport.Location = new System.Drawing.Point(711, 365);
+            this.buttonReport.Location = new System.Drawing.Point(711, 396);
             this.buttonReport.Name = "buttonReport";
             this.buttonReport.Size = new System.Drawing.Size(75, 23);
             this.buttonReport.TabIndex = 20;
@@ -129,33 +121,12 @@ namespace MorseCourse
             this.buttonReport.UseVisualStyleBackColor = true;
             this.buttonReport.Click += new System.EventHandler(this.buttonReport_Click);
             // 
-            // labelForTeste
-            // 
-            this.labelForTeste.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelForTeste.AutoSize = true;
-            this.labelForTeste.Location = new System.Drawing.Point(639, 365);
-            this.labelForTeste.Name = "labelForTeste";
-            this.labelForTeste.Size = new System.Drawing.Size(54, 13);
-            this.labelForTeste.TabIndex = 19;
-            this.labelForTeste.Text = "TestLabel";
-            // 
-            // buttonStopSound1
-            // 
-            this.buttonStopSound1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonStopSound1.Location = new System.Drawing.Point(716, 39);
-            this.buttonStopSound1.Name = "buttonStopSound1";
-            this.buttonStopSound1.Size = new System.Drawing.Size(46, 23);
-            this.buttonStopSound1.TabIndex = 18;
-            this.buttonStopSound1.Text = "Stop";
-            this.buttonStopSound1.UseVisualStyleBackColor = true;
-            this.buttonStopSound1.Click += new System.EventHandler(this.buttonStopSound1_Click);
-            // 
             // buttonPlayMorseSound1
             // 
             this.buttonPlayMorseSound1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonPlayMorseSound1.Location = new System.Drawing.Point(675, 39);
             this.buttonPlayMorseSound1.Name = "buttonPlayMorseSound1";
-            this.buttonPlayMorseSound1.Size = new System.Drawing.Size(35, 23);
+            this.buttonPlayMorseSound1.Size = new System.Drawing.Size(87, 23);
             this.buttonPlayMorseSound1.TabIndex = 15;
             this.buttonPlayMorseSound1.Text = "Play";
             this.buttonPlayMorseSound1.UseVisualStyleBackColor = true;
@@ -281,27 +252,6 @@ namespace MorseCourse
             this.textBoxInputText.Size = new System.Drawing.Size(613, 20);
             this.textBoxInputText.TabIndex = 3;
             this.textBoxInputText.Text = "Hello";
-            // 
-            // buttonTest
-            // 
-            this.buttonTest.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonTest.Location = new System.Drawing.Point(630, 394);
-            this.buttonTest.Name = "buttonTest";
-            this.buttonTest.Size = new System.Drawing.Size(75, 23);
-            this.buttonTest.TabIndex = 2;
-            this.buttonTest.Text = "Test";
-            this.buttonTest.UseVisualStyleBackColor = true;
-            this.buttonTest.Click += new System.EventHandler(this.buttonTest_Click);
-            // 
-            // buttonClearCurent
-            // 
-            this.buttonClearCurent.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonClearCurent.Location = new System.Drawing.Point(711, 394);
-            this.buttonClearCurent.Name = "buttonClearCurent";
-            this.buttonClearCurent.Size = new System.Drawing.Size(75, 23);
-            this.buttonClearCurent.TabIndex = 1;
-            this.buttonClearCurent.Text = "Clear";
-            this.buttonClearCurent.UseVisualStyleBackColor = true;
             // 
             // tabPage2
             // 
@@ -487,8 +437,6 @@ namespace MorseCourse
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button buttonClearCurent;
-        private System.Windows.Forms.Button buttonTest;
         private System.Windows.Forms.Button buttonTranslateToMorse;
         private System.Windows.Forms.TextBox textBoxOutputMorse;
         private System.Windows.Forms.Label label2;
@@ -502,14 +450,12 @@ namespace MorseCourse
         private System.Windows.Forms.Button buttonClearMorseTr;
         private System.Windows.Forms.Button buttonClearTextTr;
         private System.Windows.Forms.Button buttonPlayMorseSound1;
-        private System.Windows.Forms.Button buttonStopSound1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.NumericUpDown numericUpDownExercises;
         private System.Windows.Forms.Button buttonStartTest;
-        private System.Windows.Forms.Label labelForTeste;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn grid_ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn grid_nrEx;
