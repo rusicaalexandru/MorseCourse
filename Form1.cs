@@ -84,8 +84,8 @@ namespace MorseCourse
             }
             for (int i = 0; i < amountExercises; i++) //create test form
             {
-                new Test("Secvența de cod pentru testarea cunoștințelor este prezentată în continuare");// input strig to translate (it applies to each test)
-                //new Test(obj.data[new Random().Next(obj.data.Length)].sentence.Trim(',', '.', '!', '?', '`'));// input strig to translate (it applies to each test)
+                //new Test("Secvența de cod pentru testarea cunoștințelor este prezentată în continuare");// input strig to translate (it applies to each test)
+                new Test(obj.data[new Random().Next(obj.data.Length)].sentence.Trim(',', '.', '!', '?', '`'));// input strig to translate (it applies to each test)
             }
             Test.id++;
             dataGridView1.Rows.Add(Test.id, amountExercises, Test.score, Test.wrong, Test.skiped, Test.score + (Test.wrong * 0 + Test.skiped * 0) / amountExercises + " %");
