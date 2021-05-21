@@ -20,7 +20,6 @@ namespace MorseCourse.Utils
             if (richTextBoxReport.Text != string.Empty)
             {
                 TelegramSendMessage("1800285503:AAEvxDNxiw1vD0a2GtJ_aN-gRgDjG2A9XoY", "1028090772", richTextBoxReport.Text);
-
             }
             this.Close();
         }
