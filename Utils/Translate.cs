@@ -25,6 +25,10 @@
             morse += " "; // to translate last letter
             for (int i = 0; i < morse.Length; i++)
             {
+                if (translateMorse(morseWord) == "unknown")
+                {
+                    return "ERROR!";
+                }
                 if (morse[i] != ' ')
                 {
                     morseWord += morse[i];
@@ -34,7 +38,6 @@
                     output += translateMorse(morseWord);
                     morseWord = string.Empty;
                 }
-
             }
             return output;
         }

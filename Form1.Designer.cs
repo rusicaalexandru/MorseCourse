@@ -32,6 +32,9 @@ namespace MorseCourse
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             this.buttonReport = new System.Windows.Forms.Button();
             this.buttonPlayMorseSound1 = new System.Windows.Forms.Button();
             this.buttonClearMorseTr = new System.Windows.Forms.Button();
@@ -62,9 +65,6 @@ namespace MorseCourse
             this.buttonStartTest = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.numericUpDownExercises = new System.Windows.Forms.NumericUpDown();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -83,11 +83,10 @@ namespace MorseCourse
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
-            this.tabControl1.Location = new System.Drawing.Point(-3, -1);
-            this.tabControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabControl1.Location = new System.Drawing.Point(-2, -1);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1068, 555);
+            this.tabControl1.Size = new System.Drawing.Size(801, 451);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
@@ -109,22 +108,53 @@ namespace MorseCourse
             this.tabPage1.Controls.Add(this.label2);
             this.tabPage1.Controls.Add(this.label1);
             this.tabPage1.Controls.Add(this.textBoxInputText);
-            this.tabPage1.Location = new System.Drawing.Point(4, 25);
-            this.tabPage1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.tabPage1.Size = new System.Drawing.Size(1060, 526);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage1.Size = new System.Drawing.Size(793, 425);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Translate";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label10.Location = new System.Drawing.Point(58, 8);
+            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(131, 37);
+            this.label10.TabIndex = 23;
+            this.label10.Text = "Criptare";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label9.Location = new System.Drawing.Point(50, 138);
+            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(164, 37);
+            this.label9.TabIndex = 22;
+            this.label9.Text = "Decriptare";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label8.Location = new System.Drawing.Point(44, 307);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(716, 73);
+            this.label8.TabIndex = 21;
+            this.label8.Text = "Aplicarea codului Morse";
+            // 
             // buttonReport
             // 
             this.buttonReport.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonReport.Location = new System.Drawing.Point(948, 487);
-            this.buttonReport.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonReport.Location = new System.Drawing.Point(711, 396);
             this.buttonReport.Name = "buttonReport";
-            this.buttonReport.Size = new System.Drawing.Size(100, 28);
+            this.buttonReport.Size = new System.Drawing.Size(75, 23);
             this.buttonReport.TabIndex = 20;
             this.buttonReport.Text = "Report";
             this.buttonReport.UseVisualStyleBackColor = true;
@@ -133,10 +163,9 @@ namespace MorseCourse
             // buttonPlayMorseSound1
             // 
             this.buttonPlayMorseSound1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonPlayMorseSound1.Location = new System.Drawing.Point(899, 97);
-            this.buttonPlayMorseSound1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonPlayMorseSound1.Location = new System.Drawing.Point(674, 79);
             this.buttonPlayMorseSound1.Name = "buttonPlayMorseSound1";
-            this.buttonPlayMorseSound1.Size = new System.Drawing.Size(116, 28);
+            this.buttonPlayMorseSound1.Size = new System.Drawing.Size(87, 23);
             this.buttonPlayMorseSound1.TabIndex = 15;
             this.buttonPlayMorseSound1.Text = "Play";
             this.buttonPlayMorseSound1.UseVisualStyleBackColor = true;
@@ -145,10 +174,9 @@ namespace MorseCourse
             // buttonClearMorseTr
             // 
             this.buttonClearMorseTr.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonClearMorseTr.Location = new System.Drawing.Point(899, 290);
-            this.buttonClearMorseTr.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonClearMorseTr.Location = new System.Drawing.Point(674, 236);
             this.buttonClearMorseTr.Name = "buttonClearMorseTr";
-            this.buttonClearMorseTr.Size = new System.Drawing.Size(116, 28);
+            this.buttonClearMorseTr.Size = new System.Drawing.Size(87, 23);
             this.buttonClearMorseTr.TabIndex = 14;
             this.buttonClearMorseTr.Text = "Clear";
             this.buttonClearMorseTr.UseVisualStyleBackColor = true;
@@ -157,10 +185,9 @@ namespace MorseCourse
             // buttonClearTextTr
             // 
             this.buttonClearTextTr.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonClearTextTr.Location = new System.Drawing.Point(899, 133);
-            this.buttonClearTextTr.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonClearTextTr.Location = new System.Drawing.Point(674, 112);
             this.buttonClearTextTr.Name = "buttonClearTextTr";
-            this.buttonClearTextTr.Size = new System.Drawing.Size(116, 28);
+            this.buttonClearTextTr.Size = new System.Drawing.Size(87, 23);
             this.buttonClearTextTr.TabIndex = 13;
             this.buttonClearTextTr.Text = "Clear";
             this.buttonClearTextTr.UseVisualStyleBackColor = true;
@@ -169,10 +196,9 @@ namespace MorseCourse
             // buttonTranslateToText
             // 
             this.buttonTranslateToText.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonTranslateToText.Location = new System.Drawing.Point(899, 218);
-            this.buttonTranslateToText.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonTranslateToText.Location = new System.Drawing.Point(674, 177);
             this.buttonTranslateToText.Name = "buttonTranslateToText";
-            this.buttonTranslateToText.Size = new System.Drawing.Size(116, 65);
+            this.buttonTranslateToText.Size = new System.Drawing.Size(87, 53);
             this.buttonTranslateToText.TabIndex = 12;
             this.buttonTranslateToText.Text = "Translate";
             this.buttonTranslateToText.UseVisualStyleBackColor = true;
@@ -182,30 +208,28 @@ namespace MorseCourse
             // 
             this.textBoxOutputText.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxOutputText.Location = new System.Drawing.Point(74, 290);
-            this.textBoxOutputText.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxOutputText.Location = new System.Drawing.Point(56, 236);
+            this.textBoxOutputText.Multiline = true;
             this.textBoxOutputText.Name = "textBoxOutputText";
             this.textBoxOutputText.ReadOnly = true;
-            this.textBoxOutputText.Size = new System.Drawing.Size(816, 22);
+            this.textBoxOutputText.Size = new System.Drawing.Size(613, 68);
             this.textBoxOutputText.TabIndex = 11;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(7, 294);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(5, 239);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(35, 17);
+            this.label3.Size = new System.Drawing.Size(28, 13);
             this.label3.TabIndex = 10;
             this.label3.Text = "Text";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(7, 224);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(5, 182);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(47, 17);
+            this.label4.Size = new System.Drawing.Size(36, 13);
             this.label4.TabIndex = 9;
             this.label4.Text = "Morse";
             // 
@@ -214,19 +238,17 @@ namespace MorseCourse
             this.textBoxInputMorse.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxInputMorse.Font = new System.Drawing.Font("Sitka Small", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxInputMorse.Location = new System.Drawing.Point(74, 220);
-            this.textBoxInputMorse.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxInputMorse.Location = new System.Drawing.Point(56, 179);
             this.textBoxInputMorse.Name = "textBoxInputMorse";
-            this.textBoxInputMorse.Size = new System.Drawing.Size(816, 62);
+            this.textBoxInputMorse.Size = new System.Drawing.Size(613, 51);
             this.textBoxInputMorse.TabIndex = 8;
             // 
             // buttonTranslateToMorse
             // 
             this.buttonTranslateToMorse.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonTranslateToMorse.Location = new System.Drawing.Point(899, 58);
-            this.buttonTranslateToMorse.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonTranslateToMorse.Location = new System.Drawing.Point(674, 47);
             this.buttonTranslateToMorse.Name = "buttonTranslateToMorse";
-            this.buttonTranslateToMorse.Size = new System.Drawing.Size(116, 28);
+            this.buttonTranslateToMorse.Size = new System.Drawing.Size(87, 23);
             this.buttonTranslateToMorse.TabIndex = 7;
             this.buttonTranslateToMorse.Text = "Translate";
             this.buttonTranslateToMorse.UseVisualStyleBackColor = true;
@@ -237,30 +259,28 @@ namespace MorseCourse
             this.textBoxOutputMorse.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxOutputMorse.Font = new System.Drawing.Font("Sitka Small", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxOutputMorse.Location = new System.Drawing.Point(74, 98);
-            this.textBoxOutputMorse.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxOutputMorse.Location = new System.Drawing.Point(56, 80);
+            this.textBoxOutputMorse.Multiline = true;
             this.textBoxOutputMorse.Name = "textBoxOutputMorse";
             this.textBoxOutputMorse.ReadOnly = true;
-            this.textBoxOutputMorse.Size = new System.Drawing.Size(816, 62);
+            this.textBoxOutputMorse.Size = new System.Drawing.Size(613, 55);
             this.textBoxOutputMorse.TabIndex = 6;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(7, 102);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(5, 83);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(47, 17);
+            this.label2.Size = new System.Drawing.Size(36, 13);
             this.label2.TabIndex = 5;
             this.label2.Text = "Morse";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(7, 64);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(5, 52);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 17);
+            this.label1.Size = new System.Drawing.Size(28, 13);
             this.label1.TabIndex = 4;
             this.label1.Text = "Text";
             // 
@@ -268,10 +288,9 @@ namespace MorseCourse
             // 
             this.textBoxInputText.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxInputText.Location = new System.Drawing.Point(74, 60);
-            this.textBoxInputText.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxInputText.Location = new System.Drawing.Point(56, 49);
             this.textBoxInputText.Name = "textBoxInputText";
-            this.textBoxInputText.Size = new System.Drawing.Size(816, 22);
+            this.textBoxInputText.Size = new System.Drawing.Size(613, 20);
             this.textBoxInputText.TabIndex = 3;
             // 
             // tabPage2
@@ -280,11 +299,10 @@ namespace MorseCourse
             this.tabPage2.Controls.Add(this.label5);
             this.tabPage2.Controls.Add(this.pictureBox2);
             this.tabPage2.Controls.Add(this.pictureBox1);
-            this.tabPage2.Location = new System.Drawing.Point(4, 25);
-            this.tabPage2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.tabPage2.Size = new System.Drawing.Size(1060, 526);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage2.Size = new System.Drawing.Size(793, 425);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Info";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -293,10 +311,9 @@ namespace MorseCourse
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(448, 286);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Location = new System.Drawing.Point(336, 232);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(528, 24);
+            this.label6.Size = new System.Drawing.Size(411, 18);
             this.label6.TabIndex = 3;
             this.label6.Text = "This program don\'t includespecial characters beside numbers";
             // 
@@ -305,20 +322,18 @@ namespace MorseCourse
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Maroon;
-            this.label5.Location = new System.Drawing.Point(319, 281);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(239, 228);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(123, 29);
+            this.label5.Size = new System.Drawing.Size(100, 24);
             this.label5.TabIndex = 2;
             this.label5.Text = "Warning :";
             // 
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(319, 7);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox2.Location = new System.Drawing.Point(239, 6);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(697, 270);
+            this.pictureBox2.Size = new System.Drawing.Size(523, 219);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 1;
             this.pictureBox2.TabStop = false;
@@ -329,10 +344,9 @@ namespace MorseCourse
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(8, 7);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Location = new System.Drawing.Point(6, 6);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(317, 304);
+            this.pictureBox1.Size = new System.Drawing.Size(238, 247);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -343,10 +357,9 @@ namespace MorseCourse
             this.tabPage3.Controls.Add(this.buttonStartTest);
             this.tabPage3.Controls.Add(this.label7);
             this.tabPage3.Controls.Add(this.numericUpDownExercises);
-            this.tabPage3.Location = new System.Drawing.Point(4, 25);
-            this.tabPage3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(1060, 526);
+            this.tabPage3.Size = new System.Drawing.Size(793, 425);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Tests";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -366,11 +379,10 @@ namespace MorseCourse
             this.grid_AnswersWrong,
             this.grid_Skipped,
             this.resultColum});
-            this.dataGridView1.Location = new System.Drawing.Point(323, 6);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView1.Location = new System.Drawing.Point(242, 5);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(725, 507);
+            this.dataGridView1.Size = new System.Drawing.Size(544, 412);
             this.dataGridView1.TabIndex = 20;
             // 
             // grid_ID
@@ -417,10 +429,9 @@ namespace MorseCourse
             // 
             // buttonStartTest
             // 
-            this.buttonStartTest.Location = new System.Drawing.Point(13, 58);
-            this.buttonStartTest.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonStartTest.Location = new System.Drawing.Point(10, 47);
             this.buttonStartTest.Name = "buttonStartTest";
-            this.buttonStartTest.Size = new System.Drawing.Size(100, 28);
+            this.buttonStartTest.Size = new System.Drawing.Size(75, 23);
             this.buttonStartTest.TabIndex = 7;
             this.buttonStartTest.Text = "Start";
             this.buttonStartTest.UseVisualStyleBackColor = true;
@@ -429,58 +440,25 @@ namespace MorseCourse
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(172, 28);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Location = new System.Drawing.Point(129, 23);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(143, 17);
+            this.label7.Size = new System.Drawing.Size(107, 13);
             this.label7.TabIndex = 3;
             this.label7.Text = ": number of exercises";
             // 
             // numericUpDownExercises
             // 
-            this.numericUpDownExercises.Location = new System.Drawing.Point(13, 26);
-            this.numericUpDownExercises.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDownExercises.Location = new System.Drawing.Point(10, 21);
             this.numericUpDownExercises.Name = "numericUpDownExercises";
-            this.numericUpDownExercises.Size = new System.Drawing.Size(160, 22);
+            this.numericUpDownExercises.Size = new System.Drawing.Size(120, 20);
             this.numericUpDownExercises.TabIndex = 2;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label8.Location = new System.Drawing.Point(58, 378);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(883, 91);
-            this.label8.TabIndex = 21;
-            this.label8.Text = "Aplicarea codului Morse";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label9.Location = new System.Drawing.Point(66, 170);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(204, 46);
-            this.label9.TabIndex = 22;
-            this.label9.Text = "Decriptare";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label10.Location = new System.Drawing.Point(77, 10);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(161, 46);
-            this.label10.TabIndex = 23;
-            this.label10.Text = "Criptare";
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.tabControl1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Form1";
             this.Text = "Morse";
             this.Load += new System.EventHandler(this.Form1_Load);

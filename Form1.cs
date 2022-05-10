@@ -29,7 +29,17 @@ namespace MorseCourse
 
         private void buttonTranslateToMorse_Click(object sender, EventArgs e) //translate to morse
         {
-            textBoxOutputMorse.Text = Translate.translateToMorse(textBoxInputText.Text);//i used coment to chech if it works properly /*.ToLower()*/
+            string text = Translate.translateToMorse(textBoxInputText.Text);
+            if (text.Length > 10)
+            {
+                new TranslatedForm(Translate.translateToMorse(textBoxInputText.Text)).Show();
+                textBoxOutputMorse.Text = Translate.translateToMorse(textBoxInputText.Text);
+
+            }
+            else
+            {
+                textBoxOutputMorse.Text = Translate.translateToMorse(textBoxInputText.Text);//i used coment to chech if it works properly /*.ToLower()*/
+            }
         }
 
         private void buttonTranslateToText_Click(object sender, EventArgs e) //translate to text
